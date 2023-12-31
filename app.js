@@ -2,7 +2,7 @@
 var nomeJogador = prompt('***Seja bem vindo ao jogo de advinhação*** \n\n Qual seu nome?');
 var tutorialYesNo = confirm(`${nomeJogador}, para ver o tutorial clique em OK, caso contrário, clique em cancelar`);
 var level = 1
-var numeroTentativas = 2
+var numeroTentativas = 5
 var pontos = 80
 
 var resposta1;
@@ -40,60 +40,123 @@ if (tutorialYesNo == true) {
 };
 alert(`${nomeJogador}, Você ganhou 80 pontos de bonus para ajudar na sua jornada inicial.`);
 
-function iniciarJogo () {
+
+//---------Level 1------------------------------
+function iniciarLevel1 () {
     while (numeroTentativas > 0) {
+    //exlcluir alert
+    alert(numeroSecretoLV1);
      resposta1 = Number(prompt(`***LEVEL ATUAL: ${level} \n\n ***TENTATIVAS RESTANTES: ${numeroTentativas} \n\n ***TOTAL PONTOS: ${pontos} \n\n vamos lá ${nomeJogador} digite um numero de ${minLV1} a ${maxLV1}`));
     if (resposta1 === numeroSecretoLV1) {
         alert(`Parabéns ${nomeJogador} você acertou, bonus que você ganhou nessa fase: \n\n + 100 pontos \n\n + uma tentativa extra \n\n Agora vamos para o level 2 OK?`);
         pontos = pontos + 100;
         numeroTentativas++;
         level++;
-
-            //nivel2
-            //excluir alert
-            alert(numeroSecretoLV2)
-            resposta2 = Number(prompt(`***LEVEL ATUAL: ${level} \n\n ***TENTATIVAS RESTANTES: ${numeroTentativas} \n\n ***TOTAL PONTOS: ${pontos} \n\n vamos lá ${nomeJogador} digite um numero de ${minLV2} a ${maxLV2}`));
-            if (resposta2 === numeroSecretoLV2) {
-                alert(`Parabéns ${nomeJogador} você acertou, bonus que você ganhou nessa fase: \n\n + 120 pontos \n\n + uma tentativa extra \n\n Agora vamos para o level 3 OK?`);
-            pontos = pontos + 120;
-            numeroTentativas++;
-            level++;
-            }
-                    //nivel 3
-                //excluir alert
-                alert(numeroSecretoLV3)
-                resposta3 = Number(prompt(`***LEVEL ATUAL: ${level} \n\n ***TENTATIVAS RESTANTES: ${numeroTentativas} \n\n ***TOTAL PONTOS: ${pontos} \n\n vamos lá ${nomeJogador} digite um numero de ${minLV3} a ${maxLV3}`));
-                if (resposta3 === numeroSecretoLV3) {
-                    alert(`Parabéns ${nomeJogador} você acertou, bonus que você ganhou nessa fase: \n\n + 150 pontos \n\n + uma tentativa extra \n\n Agora vamos para o level 4 OK?`);
-                pontos = pontos + 150;
-                numeroTentativas++;
-                level++;
-                }
-
-                        //nivel 4
-                    //excluir alert
-                    alert(numeroSecretoLV4)
-                    resposta4 = Number(prompt(`***LEVEL ATUAL: ${level} \n\n ***TENTATIVAS RESTANTES: ${numeroTentativas} \n\n ***TOTAL PONTOS: ${pontos} \n\n vamos lá ${nomeJogador} digite um numero de ${minLV4} a ${maxLV4}`));
-                    if (resposta4 === numeroSecretoLV4) {
-                        alert(`Parabéns ${nomeJogador} você acertou, bonus que você ganhou nessa fase: \n\n + 230 pontos \n\n + uma tentativa extra \n\n Agora vamos para o level 5 OK?`);
-                    pontos = pontos + 230;
-                    numeroTentativas++;
-                    level++;
-                    }
-
-                                //nivel 5
-                        //excluir alert
-                        alert(numeroSecretoLV5)
-                        resposta5 = Number(prompt(`***LEVEL ATUAL: ${level} \n\n ***TENTATIVAS RESTANTES: ${numeroTentativas} \n\n ***TOTAL PONTOS: ${pontos} \n\n vamos lá ${nomeJogador} digite um numero de ${minLV5} a ${maxLV5}`));
-                        if (resposta5 === numeroSecretoLV5) {
-                            alert(`Parabéns ${nomeJogador} você acertou, bonus que você ganhou nessa fase: \n\n + 500 pontos \n\n\n ****ESSE FOI O ULTIMO LEVEL, OBRIGADO POR JOGAR, E PARABÉNS POR FINALIZAR O JOGO, FOI INCRIVEL!!!`);
-                        pontos = pontos + 500;
-                        }
-        }
+        break
+    } 
+    else {
+        alert(`Você errou ${nomeJogador}, mais não desanime!!!`)
+        numeroTentativas--
     }
-    
+    }
+}    
+
+
+
+//---------Level 2------------------------------
+function iniciarLevel2 () {
+    while (numeroTentativas > 0) {
+    //exlcluir alert
+    alert(numeroSecretoLV2);
+     resposta2 = Number(prompt(`***LEVEL ATUAL: ${level} \n\n ***TENTATIVAS RESTANTES: ${numeroTentativas} \n\n ***TOTAL PONTOS: ${pontos} \n\n vamos lá ${nomeJogador} digite um numero de ${minLV2} a ${maxLV2}`));
+    if (resposta2 === numeroSecretoLV2) {
+        alert(`Parabéns ${nomeJogador} você acertou, bonus que você ganhou nessa fase: \n\n + 120 pontos \n\n + uma tentativa extra \n\n Agora vamos para o level 3 OK?`);
+        pontos = pontos + 120;
+        numeroTentativas++;
+        level++;
+        break
+    } 
+    else {
+        alert(`Você errou ${nomeJogador}, mais não desanime!!!`)
+        numeroTentativas--
+    }
+    }
+}    
+
+
+
+//---------Level 3------------------------------
+function iniciarLevel3 () {
+    while (numeroTentativas > 0) {
+    //exlcluir alert
+    alert(numeroSecretoLV3);
+     resposta3 = Number(prompt(`***LEVEL ATUAL: ${level} \n\n ***TENTATIVAS RESTANTES: ${numeroTentativas} \n\n ***TOTAL PONTOS: ${pontos} \n\n vamos lá ${nomeJogador} digite um numero de ${minLV3} a ${maxLV3}`));
+    if (resposta3 === numeroSecretoLV3) {
+        alert(`Parabéns ${nomeJogador} você acertou, bonus que você ganhou nessa fase: \n\n + 180 pontos \n\n + uma tentativa extra \n\n Agora vamos para o level 4 OK?`);
+        pontos = pontos + 180;
+        numeroTentativas++;
+        level++;
+        break
+    } 
+    else {
+        alert(`Você errou ${nomeJogador}, mais não desanime!!!`)
+        numeroTentativas--
+    }
+    }
+}  
+
+
+
+//---------Level 4------------------------------
+function iniciarLevel4 () {
+    while (numeroTentativas > 0) {
+    //exlcluir alert
+    alert(numeroSecretoLV4);
+     resposta4 = Number(prompt(`***LEVEL ATUAL: ${level} \n\n ***TENTATIVAS RESTANTES: ${numeroTentativas} \n\n ***TOTAL PONTOS: ${pontos} \n\n vamos lá ${nomeJogador} digite um numero de ${minLV4} a ${maxLV4}`));
+    if (resposta4 === numeroSecretoLV4) {
+        alert(`Parabéns ${nomeJogador} você acertou, bonus que você ganhou nessa fase: \n\n + 275 pontos \n\n + duas tentativas extra \n\n Agora vamos para o level 5, esse é o ultimo level OK?`);
+        pontos = pontos + 275;
+        numeroTentativas = numeroTentativas + 2;
+        level++;
+        break
+    } 
+    else {
+        alert(`Você errou ${nomeJogador}, mais não desanime!!!`)
+        numeroTentativas--
+    }
+    }
+}    
+
+
+
+//---------Level 1------------------------------
+function iniciarLevel5 () {
+    while (numeroTentativas > 0) {
+    //exlcluir alert
+    alert(numeroSecretoLV5);
+     resposta5 = Number(prompt(`***LEVEL ATUAL: ${level} \n\n ***TENTATIVAS RESTANTES: ${numeroTentativas} \n\n ***TOTAL PONTOS: ${pontos} \n\n vamos lá ${nomeJogador} digite um numero de ${minLV5} a ${maxLV5}`));
+    if (resposta5 === numeroSecretoLV5) {
+        alert(`Parabéns ${nomeJogador} você acertou, bonus que você ganhou nessa fase: \n\n + 500 pontos \n\n + PARABÉNS POR TER FINALIZADO O JOGO! \n\n clique em OK para ver sua pontuação final`);
+        pontos = pontos + 100;
+        alert(`NOSSA....${nomeJogador} esse resultado foi incrivel, olha o tanto de pontos que você fez \n\n TOTAL DE PONTOS: ${pontos}`)
+        break
+    } 
+    else {
+        alert(`Você errou ${nomeJogador}, mais não desanime!!!`);
+        numeroTentativas--
+    }
+    }
+}    
+
+iniciarLevel1();
+iniciarLevel2();
+iniciarLevel3();
+iniciarLevel4();
+iniciarLevel5();
+
+if (numeroTentativas === 0) {
+    alert('Suas Tentativas acabaram :( \n\n GAME OVER!');
 }
 
+let iniciarNovoJogo = confirm('Dejesa iniciar um novo jogo?');
 
-
-iniciarJogo();
