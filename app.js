@@ -4,6 +4,10 @@ var numTentantivas = 3
 var level = 1
 var numeroSecretoLevel = Math.floor(Math.random() * 9) + 1;
 var resposta1;
+var minLV2 = 10;
+var maxLV2 = 30;
+var numeroSecretoLevel2 = Math.floor(Math.random() * (maxLV2 - minLV2 + 1)) + minLV2;
+var resposta2;
 
 
 //MOSTRAR O NUMERO SECRETO PARA TESTE
@@ -18,11 +22,19 @@ else { resposta1 = Number(prompt(`LEVEL ${level} \n DIGITE UM NUMERO DE 1 A 9`))
 
 }
 
+
 if (resposta1 === numeroSecretoLevel) {
     level++
     alert(`Parabéns ${nomeJogador}, você acertou!!! \n Ganhou 20 pontos e agora vai para o level ${level}`);
+    //MOSTRAR O NUMERO SECRETO level2 PARA TESTE
+    alert(`o numero secreto level dois é: ${numeroSecretoLevel2}`)
+    resposta2 = Number(prompt(`LEVEL ${level} \n DIGITE UM NUMERO DE 10 A 30`))
 }
 
 
 
+if (resposta2 === numeroSecretoLevel2) {
+    level++
+    alert(`Parabéns ${nomeJogador}, você acertou!!! \n Ganhou 20 pontos e agora vai para o level ${level}`);
+}
 
