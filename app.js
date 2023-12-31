@@ -160,3 +160,8 @@ if (numeroTentativas === 0) {
 
 let iniciarNovoJogo = confirm('Dejesa iniciar um novo jogo?');
 
+if (iniciarNovoJogo === true) {
+    location.reload();
+}
+
+alert(`${nomeJogador} Obrigado por jogar, até a proxima`)
