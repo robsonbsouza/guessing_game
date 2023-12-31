@@ -12,11 +12,17 @@ alert(`NUMERO SECRETO É: ${numeroSecretoLevel}`);
 
 if (vertutorial == true ) {
     alert('O JOGO FUNCIONA DA SEGUINTE FORMA, VOCÊ TEM CINCO TENTATIVAS DE ADIVINHAR O NUMERO SECRETO, CADA VEZ QUE ACERTAR O NUMERO SECRETO VOCÊ SOBE DE NIVEL, SENDO CADA NIVEL MAIS DIFICIL QUE O ANTERIOR E JOGO TEM CINCO NIVEIS NO TOTALE CADA RESPOSTA CERTA VOCE GANHA 20 PONTOS E A CADA 100 PONTOS PODE GANHAR MAIS UMA TENTATIVA, PARA TE AJUDAR O JOGO JÁ TE DA 80 PONTOS DE INICIO')
-}
+    resposta1 = Number(prompt(`LEVEL ${level} \n DIGITE UM NUMERO DE 1 A 9`))
+}   
 else { resposta1 = Number(prompt(`LEVEL ${level} \n DIGITE UM NUMERO DE 1 A 9`))
 
 }
 
-(resposta1 === numeroSecretoLevel) ? alert(`PARABÉNS ${nomeJogador}, VOCÊ ACERTOU, E AGORA VAI PARA O NIVEL 2`) : alert(`${nomeJogador}, INFELIZMENTE VOCÊ ERROU!`)
+if (resposta1 === numeroSecretoLevel) {
+    level++
+    alert(`Parabéns ${nomeJogador}, você acertou!!! \n Ganhou 20 pontos e agora vai para o level ${level}`);
+}
+
+
 
 
