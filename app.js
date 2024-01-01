@@ -1,3 +1,5 @@
+alert('testando')
+
 //Introdução ao jogo e variaveis globais
 var nomeJogador = prompt('***Seja bem vindo ao jogo de advinhação*** \n\n Qual seu nome?');
 var tutorialYesNo = confirm(`${nomeJogador}, para ver o tutorial clique em OK, caso contrário, clique em cancelar`);
